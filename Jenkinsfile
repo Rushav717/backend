@@ -47,4 +47,3 @@ pipeline {
             echo 'Build is success!'
         }
     }
-}
