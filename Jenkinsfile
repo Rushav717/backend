@@ -56,6 +56,7 @@ pipeline {
         stage('Docker Build') {
             when { 
                 expression { params.deploy }
+            }
             steps{
                 build job: 'backend-cd', parameters: [string(name: 'version', value: "${appVersion}")], wait: true 
             }
@@ -63,7 +64,7 @@ pipeline {
         
         }
     }
-}
+
     
     post { 
         always { 
