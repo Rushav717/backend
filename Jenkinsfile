@@ -53,7 +53,7 @@ pipeline {
                 }
             }
         }
-        stage('Docker Build') {
+        stage('trigger deploy') {
             when { 
                 expression { params.deploy }
             }
